@@ -4,31 +4,41 @@ exports[`should populate docs index from multiple sidebars 1`] = `
 Object {
   "doc1": Object {
     "category": "Category1",
+    "id": "doc1",
     "next": "doc2",
+    "prefix": "",
     "previous": undefined,
     "sidebar": "docs",
   },
   "doc2": Object {
     "category": "Category1",
+    "id": "doc2",
     "next": "doc3",
+    "prefix": "",
     "previous": "doc1",
     "sidebar": "docs",
   },
   "doc3": Object {
     "category": "Category2",
+    "id": "doc3",
     "next": "doc4",
+    "prefix": "",
     "previous": "doc2",
     "sidebar": "docs",
   },
   "doc4": Object {
     "category": "Category2",
+    "id": "doc4",
     "next": undefined,
+    "prefix": "",
     "previous": "doc3",
     "sidebar": "docs",
   },
   "doc5": Object {
     "category": "Category1",
+    "id": "doc5",
     "next": undefined,
+    "prefix": "",
     "previous": undefined,
     "sidebar": "otherDocs",
   },
@@ -39,21 +49,56 @@ exports[`should resolve docs from older versions 1`] = `
 Object {
   "doc1": Object {
     "category": "Category1",
+    "id": "doc1",
     "next": undefined,
+    "prefix": "",
     "previous": undefined,
     "sidebar": "docs",
   },
   "version-1.2.3-doc1": Object {
     "category": "Category2",
+    "id": "version-1.2.3-doc1",
     "next": undefined,
+    "prefix": "",
     "previous": "version-1.2.3-doc2",
     "sidebar": "version-1.2.3-docs",
   },
   "version-1.2.3-doc2": Object {
     "category": "Category1",
+    "id": "version-1.2.3-doc2",
     "next": "version-1.2.3-doc1",
+    "prefix": "",
     "previous": undefined,
     "sidebar": "version-1.2.3-docs",
+  },
+}
+`;
+
+exports[`should resolve links to other sidebar docs 1`] = `
+Object {
+  "doc1": Object {
+    "category": "Category1",
+    "id": "doc1",
+    "next": undefined,
+    "prefix": "",
+    "previous": undefined,
+    "sidebar": "docs",
+  },
+  "doc2": Object {
+    "category": "Category2",
+    "id": "doc2",
+    "next": undefined,
+    "prefix": "",
+    "previous": "doc1",
+    "sidebar": "docs2",
+  },
+  "docs.doc1": Object {
+    "category": "Category2",
+    "id": "doc1",
+    "next": "doc2",
+    "prefix": "docs",
+    "previous": undefined,
+    "sidebar": "docs2",
   },
 }
 `;
